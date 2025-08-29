@@ -90,11 +90,12 @@ def analyze_csv(file_path):
     csv_output_file = 'output/correct_products.csv'
     with open(csv_output_file, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['ProductId', 'Outlet', 'CorrectOpeningQuantity', 'CorrectSoldQuantity', 'CorrectDeliveryQuantity'])
+        writer.writerow(['ProductId', 'Outlet', 'CorrectOpeningQuantity', 'CorrectSoldQuantity', 'CorrectDeliveryQuantity', 'IncorrectProductIds'])
         
         for outlet_name, barcodes in outlets.items():
             for barcode, products in barcodes.items():
                 if len(products) > 1:  # Only duplicated barcodes
+                    incorrect_ids = [str(p['ProductId']) for p in products if not p['IsCorrect']]
                     for product in products:
                         if product['IsCorrect']:
                             writer.writerow([
@@ -102,7 +103,8 @@ def analyze_csv(file_path):
                                 outlet_name,
                                 product.get('CorrectOpeningQuantity', product['OpeningQuantity']),
                                 product.get('CorrectSoldQuantity', product['SoldQuantity']),
-                                product.get('CorrectDeliveryQuantity', product['DeliveryQuantity'])
+                                product.get('CorrectDeliveryQuantity', product['DeliveryQuantity']),
+                                '|'.join(incorrect_ids)
                             ])
 
 if __name__ == "__main__":
