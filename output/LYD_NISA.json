@@ -555,7 +555,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 7.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 3.0
+      "CorrectSoldQuantity": 1.0
     },
     {
       "Name": "2 Player Tennis Set",
@@ -823,7 +823,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 1.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 3.0
+      "CorrectSoldQuantity": 1.0
     },
     {
       "Name": "Click N Catch Game",
@@ -1133,7 +1133,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 3.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 9.0
+      "CorrectSoldQuantity": 3.0
     },
     {
       "Name": "Fibre Optic Wand",
@@ -1632,7 +1632,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 8.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 3.0
+      "CorrectSoldQuantity": 1.0
     },
     {
       "Name": "Huge Light Up Caterpillar",

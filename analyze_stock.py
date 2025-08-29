@@ -65,9 +65,10 @@ def analyze_csv(file_path):
             if correct_products:
                 # Should only be one correct product per barcode now
                 correct_product = correct_products[0]
-                correct_product['CorrectOpeningQuantity'] = sum(p['OpeningQuantity'] for p in products)
-                correct_product['CorrectDeliveryQuantity'] = sum(p['DeliveryQuantity'] for p in products)
-                correct_product['CorrectSoldQuantity'] = sum(p['SoldQuantity'] for p in products)
+                unique_products = {p['ProductId']: p for p in products}
+                correct_product['CorrectOpeningQuantity'] = sum(p['OpeningQuantity'] for p in unique_products.values())
+                correct_product['CorrectDeliveryQuantity'] = sum(p['DeliveryQuantity'] for p in unique_products.values())
+                correct_product['CorrectSoldQuantity'] = sum(p['SoldQuantity'] for p in unique_products.values())
         
         # Collect ProductIds to delete (where IsCorrect=False)
         for barcode, products in duplicated_barcodes.items():
@@ -95,7 +96,7 @@ def analyze_csv(file_path):
         for outlet_name, barcodes in outlets.items():
             for barcode, products in barcodes.items():
                 if len(products) > 1:  # Only duplicated barcodes
-                    incorrect_ids = [str(p['ProductId']) for p in products if not p['IsCorrect']]
+                    incorrect_ids = list(set(str(p['ProductId']) for p in products if not p['IsCorrect']))
                     for product in products:
                         if product['IsCorrect']:
                             writer.writerow([

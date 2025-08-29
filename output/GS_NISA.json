@@ -1311,7 +1311,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 35.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 174.0
+      "CorrectSoldQuantity": 58.0
     },
     {
       "Name": "Click N Catch Game",
@@ -1957,7 +1957,7 @@
       "IsCorrect": true,
       "CorrectOpeningQuantity": 4.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 9.0
+      "CorrectSoldQuantity": 3.0
     },
     {
       "Name": "Huge Light Up Caterpillar",
@@ -1992,9 +1992,9 @@
       "DeliveryQuantity": 0.0,
       "SoldQuantity": 22.0,
       "IsCorrect": true,
-      "CorrectOpeningQuantity": 2.0,
+      "CorrectOpeningQuantity": 1.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 44.0
+      "CorrectSoldQuantity": 22.0
     },
     {
       "Name": "1XSINGLE * INSIDE SOAP",
@@ -2013,9 +2013,9 @@
       "DeliveryQuantity": 0.0,
       "SoldQuantity": 22.0,
       "IsCorrect": true,
-      "CorrectOpeningQuantity": 2.0,
+      "CorrectOpeningQuantity": 1.0,
       "CorrectDeliveryQuantity": 0.0,
-      "CorrectSoldQuantity": 44.0
+      "CorrectSoldQuantity": 22.0
     },
     {
       "Name": "1XSINGLE * INSIDE SOAP",
